@@ -3,11 +3,10 @@
 @section('page-title', 'Laravel Comics')
 
 @section('content')
-<h1 class="d-flex justify-content-center mt-5 tito">Carica il tuo Comic...</h1>
-    <section class="container my-5 d-flex justify-content-center">
-        <form action="{{ route('comics.store') }}" method="POST">
+<div class="bg-create">
+    <section class="container-fluid my-5 d-flex justify-content-center">
+        <form class="bg-create2" action="{{ route('comics.store') }}" method="POST">
         @csrf
-
             <div class="spazio">
                 <label class="my-text" for="title">Titolo..</label>
                 <input class="inputz" type="text" name="title" id="title">
@@ -57,23 +56,17 @@
                 <input class="inputz buttone" type="submit" value="Invia">
             </div>
         </form>
-
     </section>
+</div>
 @endsection
 
 <style>
-
-.tito {
-    font-size: 2.5rem;
-    color: rgba(2, 130, 249);
-    text-transform: uppercase;
-}
-
 .spazio {
-    margin-bottom: 20px
+    margin-bottom: 30px
 }
 
 .inputz {
+    width: 100%;
     display: flex;
     justify-content: center;
     border-radius: 10px

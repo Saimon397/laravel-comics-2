@@ -1,5 +1,4 @@
 @use '../scss/variables' as *;
-
 @import '~bootstrap/scss/bootstrap';
 
 body {
@@ -22,7 +21,6 @@ header {
         color: $blacktext;
         height: 40px;
         padding-bottom: 48px;
-        // font-size: ;
 
         &.active,
         &:hover {
@@ -356,4 +354,17 @@ h1 {
 .adv {
     margin-top: -70px;
     color: $textgray;
+}
+
+.bg-create {
+    background-image: url('../img/DC_Home_20221219_DCComm22.jpg');
+    background-size: cover;
+    padding: 10px;
+}
+
+.bg-create2 {
+    background-color: rgba(28, 28, 28);
+    padding: 60px 60px;
+    border-radius: 10px;
+    box-shadow: 4px 2px 2px 2px rgb(15, 15, 15);
 }
