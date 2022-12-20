@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('characters');
-
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
 Route::resource('comics', HomeController::class);
+
+Route::get('/characters', function () {
+    return view('characters');
+})->name('characters');
 
 Route::get('/movies', function () {
     return view('movies');
