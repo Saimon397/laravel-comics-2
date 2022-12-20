@@ -17,7 +17,15 @@
 
 <body>
 
-
+    <div>
+        @include('partials.header')
+    </div>
+        <main>
+            @yield('content')
+        </main>
+    <div>
+        @include('partials.footer')
+    </div>
 
 </body>
 
