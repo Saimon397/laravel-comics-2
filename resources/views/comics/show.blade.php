@@ -15,11 +15,24 @@
         <div class="position-absolute box-mod">
             <a href="{{route('comics.edit', $comic->id)}}" class="mod">Modifica</a>
         </div>
-        <form action="{{route('comics.destroy', $comic->id)}}" method="POST" class="position-absolute box-delete">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn-delete">Cancella</button>
-        </form>
+        <div class="position-absolute box-delete">
+            <button id="myBtn" class="btn-delete">Cancella</button>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close my-close">&times;</span>
+                <h4 class="text-center mb-4">Sei sicuro di voler cancellare questo Comic?</h4>
+                <form action="{{route('comics.destroy', $comic->id)}}" method="POST" class="text-center">
+                    @csrf
+                    @method('DELETE')
+                    <div>
+                    <button type="submit" class="my-btn me-4">Si</button>
+                    <span class="my-btn no" id="btn-close">No</span>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
     </div>
 </div>
 
@@ -43,5 +56,7 @@
                 <img src="{{ Vite::asset('/resources/img/adv.jpg') }}" alt="">
             </div>
         </div>
+
     </div>
+
 @endsection

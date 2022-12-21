@@ -4,6 +4,7 @@
 
 @section('content')
 <div class="bg-create">
+    <a href="{{route('comics.show', $comic->id)}}" class="indietro"><i class="fa-solid fa-circle-left"></i> Torna indietro</a>
     <section class="container-fluid my-5 d-flex justify-content-center">
         <form class="bg-create2" action="{{ route('comics.update', $comic->id)  }}" method="POST">
         @csrf
