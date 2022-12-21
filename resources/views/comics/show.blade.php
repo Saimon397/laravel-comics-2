@@ -12,6 +12,14 @@
             <img src="{{$comic->thumb}}" alt="" class="img-single">
             <span class="view text-center">view gallery</span>
         </div>
+        <div class="position-absolute box-mod">
+            <a href="{{route('comics.edit', $comic->id)}}" class="mod">Modifica</a>
+        </div>
+        <form action="{{route('comics.destroy', $comic->id)}}" method="POST" class="position-absolute box-delete">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn-delete">Cancella</button>
+        </form>
     </div>
 </div>
 
@@ -35,7 +43,5 @@
                 <img src="{{ Vite::asset('/resources/img/adv.jpg') }}" alt="">
             </div>
         </div>
-
     </div>
-
 @endsection

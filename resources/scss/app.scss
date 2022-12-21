@@ -61,6 +61,24 @@ img {
         font-size: 25px;
     }
 
+    .btn-upload {
+        text-decoration: none;
+        position: absolute;
+        top: -37px;
+        right: 16%;
+        padding: 20px 30px;
+        background-color: $bluelink;
+        text-transform: uppercase;
+        color: $whitetext;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: $bluetext;
+        }
+    }
+
     .container-comics {
         padding-top: 3.5rem;
         padding-bottom: 7rem;
@@ -371,4 +389,75 @@ h1 {
 
 form {
     width: 50%;
+}
+
+.my-form {
+    background-color: $bgblack;
+    color: $whitetext;
+    margin: 50px 0;
+    border-radius: 3rem;
+    padding: 3rem 10rem;
+
+    h1 {
+        color: $bluelink;
+    }
+
+    * {
+        font-size: 1.2rem;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .my-btn {
+        background-color: $bluelink;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        color: $whitetext;
+        border: 0;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: $bluetext;
+        }
+    }
+}
+
+.box-mod {
+    top: 500px;
+    right: 18%;
+
+    .mod {
+        text-decoration: none;
+        padding: 20px 30px;
+        background-color: rgb(85, 186, 89);
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: rgb(51, 122, 54);
+        }
+    }
+}
+
+.box-delete {
+    top: 485px;
+    right: 35%;
+
+    .btn-delete {
+        border: 0;
+        padding: 15px 25px;
+        background-color: rgb(85, 186, 89);
+        text-transform: uppercase;
+        color: $whitetext;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: rgb(51, 122, 54);
+        }
+    }
 }

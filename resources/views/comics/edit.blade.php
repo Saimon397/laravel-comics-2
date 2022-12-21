@@ -5,8 +5,9 @@
 @section('content')
 <div class="bg-create">
     <section class="container-fluid my-5 d-flex justify-content-center">
-        <form class="bg-create2" action="{{ route('comics.store') }}" method="POST">
+        <form class="bg-create2" action="{{ route('comics.update', $comic->id)  }}" method="POST">
         @csrf
+        @method('PUT')
             <div class="spazio">
                 <label class="my-text" for="title">Titolo..</label>
                 <input class="inputz" type="text" name="title" id="title">

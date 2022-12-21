@@ -58,9 +58,8 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
         return view('comics.show', compact('comic'));
     }
 
@@ -70,9 +69,9 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -84,7 +83,18 @@ class HomeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $formData = $request->all();
+        $newComic = Comic::find($id);
+        $newComic->title = $formData['title'];
+        $newComic->description = $formData['description'];
+        $newComic->price = $formData['price'];
+        $newComic->series = $formData['series'];
+        $newComic->sale_date = $formData['sale_date'];
+        $newComic->type = $formData['type'];
+        $newComic->artists = $formData['artists'];
+        $newComic->writers = $formData['writers'];
+        $newComic->save();
+        return redirect()->route('comics.show', $newComic->id);
     }
 
     /**
@@ -93,8 +103,9 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
