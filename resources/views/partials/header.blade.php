@@ -21,7 +21,7 @@
             <ul class="d-flex list-unstyled justify-content-end gap-5 text-uppercase fw-bold m-0">
                 @foreach ($links as $link)
                     <li class="nav-item links">
-                        <a class="{{(Route::currentRouteName() == $link['url'] || (Route::currentRouteName() == 'single-page' && $link['url'] == 'comics'))  ? 'active' : ''}}"  href="{{route($link['url'])}}">{{$link['text']}}</a>
+                        <a class="{{(Route::currentRouteName() == $link['url'] || (Str::contains(Route::currentRouteName() , 'comics') && $link['url'] == 'comics.index'))  ? 'active' : ''}}"  href="{{route($link['url'])}}">{{$link['text']}}</a>
                     </li>
                 @endforeach
             </ul>

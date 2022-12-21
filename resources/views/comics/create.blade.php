@@ -34,7 +34,7 @@
 
             <div class="spazio">
                 <label class="my-text" for="sale_date">Data di uscita..</label>
-                <input class="inputz" type="text" name="sale_date" id="sale_date">
+                <input class="inputz" placeholder="yyyy-mm-dd" type="text" name="sale_date" id="sale_date">
             </div>
 
             <div class="spazio">
@@ -53,7 +53,7 @@
             </div>
 
             <div class="spazio">
-                <input class="inputz buttone" type="submit" value="Invia">
+                <input class="buttone" type="submit" value="Invia">
             </div>
         </form>
     </section>
@@ -66,6 +66,7 @@
 }
 
 .inputz {
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -80,11 +81,12 @@
 
 .buttone {
     padding: 10px 10px;
-        background-color: rgba(2, 130, 249);
-        text-transform: uppercase;
-        color: white;
-        font-weight: bold;
-        font-size: 25px;
+    background-color: rgba(2, 130, 249);
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    width: 30%;
 }
 
 .buttone:hover {
